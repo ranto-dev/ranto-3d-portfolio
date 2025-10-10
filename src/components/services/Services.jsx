@@ -1,10 +1,21 @@
+import {
+  FaCode,
+  FaLaptop,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+  FaRust,
+  FaSass,
+} from "react-icons/fa6";
 import ComputerModelContainer from "./computer/ComputerModelContainer";
 import ConsoleModelContainer from "./console/ConsoleModelContainer";
-import Counter from "./Counter";
 import MugModelContainer from "./mug/MugModelContainer";
 import "./services.css";
 import { motion, useInView } from "motion/react";
 import { useRef, useState } from "react";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiExpress, SiFastapi } from "react-icons/si";
+import { FaMobileAlt } from "react-icons/fa";
 
 const textVariants = {
   initial: {
@@ -40,21 +51,56 @@ const listVariants = {
 const services = [
   {
     id: 1,
-    img: "/service1.png",
+    icon: <FaLaptop />,
     title: "Web Development",
-    counter: 35,
+    counter: 20,
   },
   {
     id: 2,
-    img: "/service2.png",
-    title: "Product Design",
-    counter: 23,
+    icon: <FaMobileAlt />,
+    title: "Application Development",
+    counter: 5,
   },
   {
     id: 3,
-    img: "/service3.png",
-    title: "Branding",
-    counter: 46,
+    icon: <FaCode />,
+    title: "Scripting",
+    counter: 10,
+  },
+];
+
+const skills = [
+  {
+    id: 1,
+    icon: <FaSass />,
+  },
+  {
+    id: 2,
+    icon: <RiTailwindCssFill />,
+  },
+  {
+    id: 3,
+    icon: <FaReact />,
+  },
+  {
+    id: 4,
+    icon: <SiExpress />,
+  },
+  {
+    id: 5,
+    icon: <FaNodeJs />,
+  },
+  {
+    id: 6,
+    icon: <SiFastapi />,
+  },
+  {
+    id: 7,
+    icon: <FaPython />,
+  },
+  {
+    id: 8,
+    icon: <FaRust />,
   },
 ];
 
@@ -63,7 +109,7 @@ const Services = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-200px" });
   return (
-    <div className="services" ref={ref}>
+    <div className="services" ref={ref} id="services">
       <div className="sSection left">
         <motion.h1
           variants={textVariants}
@@ -84,9 +130,7 @@ const Services = () => {
               key={service.id}
               onClick={() => setCurrentServiceId(service.id)}
             >
-              <div className="serviceIcon">
-                <img src={service.img} alt="" />
-              </div>
+              <div className="serviceIcon">{service.icon}</div>
               <div className="serviceInfo">
                 <h2>{service.title}</h2>
                 <h3>{service.counter} Projects</h3>
@@ -94,9 +138,22 @@ const Services = () => {
             </motion.div>
           ))}
         </motion.div>
-        <div className="counterList">
-          <Counter from={0} to={104} text="Projects Completed" />
-          <Counter from={0} to={72} text="Happy Clients" />
+        <div className="skills">
+          {skills.map((skill) => {
+            return (
+              <div
+                className="flex flex-col justify-center items-start gap-2"
+                key={skill.id}
+              >
+                <div
+                  className="bg-blue-500/10 text-xl rounded-full"
+                  style={{ padding: "10px" }}
+                >
+                  {skill.icon}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="sSection right">
