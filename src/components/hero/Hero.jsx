@@ -4,7 +4,12 @@ import Speech from "./Speech";
 import { motion } from "motion/react";
 import Shape from "./Shape";
 import { Suspense } from "react";
-import { FaDiscord, FaFacebook, FaGithub, FaNetworkWired } from "react-icons/fa6";
+import {
+  FaDiscord,
+  FaFacebook,
+  FaGithub,
+  FaNetworkWired,
+} from "react-icons/fa6";
 import { MdPiano } from "react-icons/md";
 import { GiBasketballBall, GiDrumKit, GiGuitar } from "react-icons/gi";
 import { HiOutlineComputerDesktop, HiOutlinePaintBrush } from "react-icons/hi2";
