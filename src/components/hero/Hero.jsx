@@ -4,9 +4,10 @@ import Speech from "./Speech";
 import { motion } from "motion/react";
 import Shape from "./Shape";
 import { Suspense } from "react";
-import { FaDiscord, FaFacebook, FaGithub } from "react-icons/fa6";
+import { FaDiscord, FaFacebook, FaGithub, FaNetworkWired } from "react-icons/fa6";
 import { MdPiano } from "react-icons/md";
 import { GiBasketballBall, GiDrumKit, GiGuitar } from "react-icons/gi";
+import { HiOutlineComputerDesktop, HiOutlinePaintBrush } from "react-icons/hi2";
 
 const awardVariants = {
   initial: {
@@ -58,11 +59,31 @@ const Hero = () => {
           animate="animate"
           className="flex flex-col gap-2 absolute bottom-0"
         >
-          <motion.h2 variants={awardVariants}>Top Rated Designer</motion.h2>
-          <motion.p variants={awardVariants}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <motion.h2 variants={awardVariants} className="font-semibold text-xl">
+            Engineer driven by innovation and creativity.
+          </motion.h2>
+          <motion.p variants={awardVariants} className="text-sm">
+            I turn ambitious ideas into smart, fast, and elegant applications.
           </motion.p>
           <motion.div variants={awardVariants} className="awardList">
+            <motion.div
+              className="bg-white/10 text-blue-500 text-xl flex items-center justify-center rounded-full w-10 h-10"
+              variants={awardVariants}
+            >
+              <HiOutlineComputerDesktop />
+            </motion.div>
+            <motion.div
+              className="bg-white/10 text-blue-500 text-xl flex items-center justify-center rounded-full w-10 h-10"
+              variants={awardVariants}
+            >
+              <HiOutlinePaintBrush />
+            </motion.div>
+            <motion.div
+              className="bg-white/10 text-blue-500 text-xl flex items-center justify-center rounded-full w-10 h-10"
+              variants={awardVariants}
+            >
+              <FaNetworkWired />
+            </motion.div>
             <motion.div
               className="bg-white/10 text-blue-500 text-xl flex items-center justify-center rounded-full w-10 h-10"
               variants={awardVariants}
@@ -161,7 +182,7 @@ const Hero = () => {
           className="certificate"
         >
           <img src="/certificate.png" alt="" />
-          LICENCE DEGREE
+          MASTER DEGREE
           <br />
           PROFESSIONAL
           <br />
