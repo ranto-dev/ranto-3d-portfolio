@@ -5,9 +5,9 @@ import { motion, useInView, useScroll, useTransform } from "motion/react";
 const items = [
   {
     id: 1,
-    img: "/p1.jpg",
+    img: "/portfolio1.png",
     title: "Full Stack Blog Application",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
+    desc: "J'ai conçu et développé la plateforme de blog corporate pour SK Yitro Consulting, une entreprise en service numérique cherchant à établir son leadership d'opinion et à améliorer son référencement naturel (SEO). Ce projet a impliqué la création d'une application web complète, de l'interface utilisateur à la gestion de contenu et à l'infrastructure backend.",
     link: "/",
   },
   {
@@ -108,14 +108,6 @@ const Portfolio = () => {
   const [containerDistance, setContainerDistance] = useState(0);
   const ref = useRef(null);
 
-  // useEffect(() => {
-  //   if (ref.current) {
-  //     const rect = ref.current.getBoundingClientRect();
-  //     setContainerDistance(rect.left);
-  //   }
-  // }, []);
-
-  // FIX: Re-calculate when screen size changes
   useEffect(() => {
     const calculateDistance = () => {
       if (ref.current) {
@@ -148,7 +140,6 @@ const Portfolio = () => {
           className="empty"
           style={{
             width: window.innerWidth - containerDistance,
-            // backgroundColor: "pink",
           }}
         />
         {items.map((item) => (

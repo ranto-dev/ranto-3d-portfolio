@@ -16,6 +16,7 @@ import { useRef, useState } from "react";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiFastapi } from "react-icons/si";
 import { FaMobileAlt } from "react-icons/fa";
+import { BiLogoTypescript } from "react-icons/bi";
 
 const textVariants = {
   initial: {
@@ -80,26 +81,30 @@ const skills = [
   },
   {
     id: 3,
-    icon: <FaReact />,
+    icon: <BiLogoTypescript />,
   },
   {
     id: 4,
-    icon: <SiExpress />,
+    icon: <FaReact />,
   },
   {
     id: 5,
-    icon: <FaNodeJs />,
+    icon: <SiExpress />,
   },
   {
     id: 6,
-    icon: <SiFastapi />,
+    icon: <FaNodeJs />,
   },
   {
     id: 7,
-    icon: <FaPython />,
+    icon: <SiFastapi />,
   },
   {
     id: 8,
+    icon: <FaPython />,
+  },
+  {
+    id: 9,
     icon: <FaRust />,
   },
 ];
