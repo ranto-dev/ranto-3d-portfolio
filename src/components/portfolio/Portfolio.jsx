@@ -26,16 +26,16 @@ const items = [
   },
   {
     id: 4,
-    img: "/p4.jpg",
-    title: "Social Media Project",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
+    img: "/portfolio4.png",
+    title: "Fun Talker bot",
+    desc: "Fun Talker is an engaging web application featuring an AI-powered humor chatbot capable of generating original jokes and playful responses in real time. Designed to entertain and lighten conversations, the app blends natural language processing with a smooth, modern interface to deliver a fun, interactive experience. This project showcases my ability to build creative, user-friendly applications that combine AI intelligence with dynamic web development.",
     link: "/",
   },
   {
     id: 5,
-    img: "/p5.jpg",
-    title: "Animated Portfolio Website",
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laboriosam tempore consectetur, atque maiores culpa quia, repellat id, dicta esse fugit neque voluptatem provident itaque voluptates minima. Repudiandae, provident hic.",
+    img: "/portfolio5.png",
+    title: "rexapp: cli tool",
+    desc: "RexApp is a fast and developer-friendly command-line tool built in Rust to streamline the creation of Express.js projects. It automates boilerplate setup, generates clean project structures, and accelerates development by handling repetitive tasks with precision and speed. Designed for efficiency and productivity, RexApp highlights my expertise in Rust, CLI tooling, and backend project scaffolding.",
     link: "/",
   },
 ];
